@@ -22,6 +22,10 @@ func main() {
 	})
 	
 	//create
+	r.GET("/new", func(ctx *gin.Context) {
+		ctx.HTML(200, "add.html", gin.H{})
+	})
+
 	r.POST("/new", func(ctx *gin.Context) {
 		title := ctx.PostForm("title")
 		text := ctx.PostForm("text")

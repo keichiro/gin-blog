@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete -GinBlog</title>
+</head>
+<body>
+    <h1>削除確認</h1>
+    <p>本当に削除しますか？</p>
+    <ul>
+        <li>内容： {{.blog.Title}}</li>
+        <li>状態： {{.blog.Text}}</li>
+        <li>作成時間： {{.blog.CreatedAt}}</li>
+    </ul>
+
+    <form method="post" action="/delete/{{.blog.ID}}">
+        <p><input type="submit" value="削除"></p>
+        <p><a href="/">戻る</a></p>
+    </form>
+</body>
+</html>

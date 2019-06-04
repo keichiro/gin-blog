@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Update -GinBlog</title>
+</head>
+<body>
+    <h1>Update</h1>
+    <form method="post" action="/update/{{.blog.ID}}">
+        <p>Title<input type="text" name="title" size="30" value="{{ .blog.Title }}"></p>
+        <p><textarea name="text" cols="50" rows="20">{{ .blog.Text }}</textarea></p>
+        <p><input type="submit" value="Send"></p>
+    </form>
+</body>
+</html>

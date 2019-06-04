@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail -GinBlog</title>
+</head>
+<body>
+    <a href="/">Index</a>
+{{/*    <ul style="list-style: none;">*/}}
+{{/*        {{ range .blogs }}*/}}
+{{/*            <li> <h1>{{ .Title }}</h1>*/}}
+{{/*            <p>{{ .Text }}</p>*/}}
+{{/*        </li>*/}}
+{{/*        {{ end }}*/}}
+{{/*    </ul>*/}}
+
+    <h1>{{.blog.Title}}</h1>
+    <p>{{.blog.Text}}</p>
+    <div class="footer" style="text-align: center">
+        <small>&copy; keichiro</small>
+    </div>
+</body>
+</html>

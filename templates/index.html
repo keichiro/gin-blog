@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>GinBlog</title>
+</head>
+<body>
+    <h1>POST</h1>
+    <ul>
+        {{ range .blogs }}
+        <li><a href="/detail/{{.ID}}">{{ .Title }}</a>
+            <label><a href="/update/{{.ID}}">編集</a></label>
+            <label><a href="/delete_check/{{.ID}}">削除</a></label>
+        </li>
+        {{ end }}
+    </ul>
+    <h2>Add</h2>
+    <form method="post" action="/new">
+        <p>Title<input type="text" name="title" size="30" placeholder="入力してください" ></p>
+        <p><textarea name="text" cols="50" rows="20"></textarea></p>
+        <p><input type="submit" value="Send"></p>
+    </form>
+</body>
+</html>
